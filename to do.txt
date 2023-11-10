@@ -1,0 +1,97 @@
+
+
+ToDo:
+- RSVPs
+- RollCalls
+- Automated Priority Reset
+- HUGE: Code Revision, RosterBot V2.0
+
+Bugs:
+- Peeps can't sideline themselves or each other as 'fixed'. Is this working at all?
+
+
+
+To Done 25/09/20:
+- There was an error in clean_games: 'tz' 8:00am. 2020 09 24 07 48 11.log
+- List object is not callable, 3:49am. 2020 09 24 03 47 01.log
+- can only concatenate str (not "int") to str 3:30am. 2020 09 24 03 30 01
+- 'completed' 2:56am 2020 09 24 02 57 33.log
+- Bright Dawn has a "setting" dictionary at the end. Delete it.
+
+To Done 17/09/20 (and sometime before this):
+- Better Bot controls for me
+- Better log sharing to me
+- Bot now publishes it's online offline status to whatever gamepublishchannel is set (if any) for each guild
+
+To Done 12/09/20:
+- Create a more user friendly way of making new games (guided command interface)
+
+To Done 07/09/20:
+- Fixed Audit Roster to demote lower priority players (not just check eligibility)
+- Edited embed colouring so that red is only for unpublished games
+- If sidelines are turned off while there are players sidelined, it just puts a strikethrough the names in the embed
+- Enabled a setting for the Server Owner to set: GMs only edit their own games. Authority role 1 can edit any
+- Created Game Reminders and added to bot loop
+
+To Done 06/09/20:
+- Finished Audit Roster loop
+- Enhanced error reporting
+
+To Done 03/09/20:
+- Schedule regular auditing of games and ensuring players are eligible for the games they're in
+
+To Done 02/09/20:
+- Listme, Rosterme, and SidelineMe functions
+- Revise the roster and sideline functions of GMs
+- Message players if their rostered/sidelined status has changed as a result of someone using list/roster/sideline me
+- Message players according to the whispergmrosterupdates, whispergmsidelineupdates, whisperplayersrosterupdates, and whispersidelinerosterupdates
+
+To Done 01/09/20:
+- Fixed a bug where editing your own timezone changed everyone's timezone
+- Create an authority level for editing completed games and making games incomplete
+- Better connection/uptime logging
+
+To Done 30/08/20:
+- Report errors to me as a DM in Discord
+- Allow copying of games
+- Let changes to published games delete and repost an updated embed
+- Message players of updates to games
+- Allow storing, setting, and using of Player Timezones
+- Reset Priorities command
+
+To Done 25/08/20:
+- Find out why Roster me was giving class TypeError
+- Allow !roster and !rb interchangably
+- format and upload the readme.txt as a word doc
+- Find out why !roster default doesn't output the embed for default (something to do with empty embed values)
+- Find out why timezone conversion went the wrong way (+9 rather than -9 hours from GMT+10 to GMT+1)
+
+
+datetime
+duration
+description
+minlevel
+maxlevel
+gpreward
+xpreward
+gm
+name
+maxplayers
+completed
+roster
+sidelines
+textchannel
+voicechannel
+published
+
+
+details
+	data["whispergmdetailupdates"] = "0" #Bool 		Whether to whisper detail changes to the game to the GM
+	data["whisperplayersdetailupdates"] = "0" #Bool 	Whether to whisper players on the roster of changes to the game details	
+	data["whispersidelinedetailupdates"] = "0" #Bool 	Whether to whisper players on the sideline of changes to the game details
+roster
+	data["whispergmrosterupdates"] = "0" #Bool 		Whether to whisper roster changes to the game to the GM
+	data["whisperplayersrosterupdates"] = "0" #Bool 	Whether to whisper players on the roster of changes to the game roster	
+	data["whispersidelinerosterupdates"] = "0" #Bool 	Whether to whisper players on the sideline of changes to the game roster
+sideline
+	data["whispergmsidelineupdates"] = "0" #Bool 		Whether to whisper sideline changes to the game to the GM
